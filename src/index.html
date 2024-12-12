@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
     <title>InfoGames | Inicio</title>
 </head>
 <body>
-    
+    <!-- Container all page -->
+    <div>
+        <!-- Nav -->
+        <nav class="h-[100px] flex justify-between items-center gap-6 p-4 bg-blue-300 bg-opacity-65  rounded-md">
+            <!-- Logo -->
+            <img src="./assets/images/logo.png" class="max-w-full max-h-full" alt="Logo page" srcset="">
+            <!-- All pages -->
+            <div class="flex gap-4 text-white font-semibold">
+                <p>
+                    <a href="./index.html">Inicio</a>
+                </p>
+                <p>
+                    <a href="#">Ofertas</a>
+                </p>
+                <p>
+                    <a href="#">Videojuegos</a>
+                </p>
+            </div>
+            <!-- Button sing up -->
+            <div>
+                <button class="bg-red-400 p-2 w-[120px] rounded-xl text-white">Inicia Sesion</button>
+            </div>
+        </nav>
+        <!-- Main -->
+        <main class="grid grid-cols-3">
+            <!-- Section of categories -->
+            <section id="section_categorias" class="col-span-1">
+                <h2>Categorias de Videojuegos</h2>
+                <!-- List of categories -->
+                <ul id="categorias">
+                    
+                </ul>
+            </section>
+            <!-- Container width cards of videogames -->
+            <div class="col-span-2">
+                <h2>Videojuegos sobre </h2>
+                <!-- Cont with cards -->
+                <div id="games" class="flex flex-wrap">
+
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+    </div>
     <!-- JavaScript -->
     <script src="./js/script.js"></script>
 </body>
