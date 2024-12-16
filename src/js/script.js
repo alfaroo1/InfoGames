@@ -8,7 +8,7 @@ let cat = document.getElementById('categoria');
 //Funciones
 //Cargamos todos los tipos de generes
 const loadGenres = () =>{
-    fetch(rutaRawdGenres+"key="+rawgKey)
+    fetch(rutaRawdGenres+"lang=es"+"&key="+rawgKey)
     .then((respuesta) => respuesta.json())
     .then((datos) => {
         //Creamos el fragment
@@ -17,9 +17,12 @@ const loadGenres = () =>{
         datos.results.forEach((resultado) => {
             //Creamos un item
             let item = document.createElement("li");
+            item.classList.add("mb-4")
+            item.classList.add("text-center")
             //Creamos un button por cada categoria
             let buton = document.createElement('button');
             buton.textContent = resultado.name;
+            buton.classList.add("btn__genres")
             item.appendChild(buton);
             //Le pasamos cada item al fragment
             fragment.appendChild(item);
@@ -41,7 +44,8 @@ const gamesWithGenre = async (event) =>{
     //Le pasamos el tipo de categoria para completar el titulo
     cat.textContent = categoria;
     //Le pasamos la URL con la categoria
-    let respuesta = await fetch(routeRawdGames+"genres="+categoria.toLowerCase()+"&key="+rawgKey);
+    console.log(routeRawdGames+"genres="+categoria.toLowerCase()+"&lang=es"+"&key="+rawgKey);
+    let respuesta = await fetch(routeRawdGames+"lang=es&"+"genres="+categoria.toLowerCase()+"&key="+rawgKey);
     let juegos = await respuesta.json();
     let juegosJSON = await juegos.results;
     console.log(juegosJSON);
@@ -55,20 +59,34 @@ const showGames = (games) =>{
     games.forEach((game) =>{
         //Contenedor
         let div = document.createElement('div');
-        //Imagen
-        let img = document.createElement('img');
-        img.src = game.background_image;
-        div.appendChild(img);
+        div.classList.add("card");
         //Titulo
         let title = document.createElement('h3');
         title.textContent = game.name;
+        title.classList.add("mb-4")
         div.appendChild(title);
+        //Imagen
+        let img = document.createElement('img');
+        img.src = game.background_image;
+        img.classList.add("mb-4")
+        div.appendChild(img);
         //Plataformas
         let contPlataform = document.createElement('div');
-        game.platforms.forEach((plataforma) => {
+        game.ratings.forEach((puntuacion) => {
             let p = document.createElement('p');
-            p.textContent = plataforma.platform.name;
-            console.log(plataforma.platform.name);
+            //Calificacion
+            let cali = document.createElement('span');
+            //Ponemos la primera letra en mayuscula
+            cali.textContent = puntuacion.title[0].toUpperCase() + puntuacion.title.substring(1);
+            cali.classList.add("font-semibold")
+            // cali[0].toUpperCase();
+            p.appendChild(cali);
+            //Porcentaje
+            let porcentaje = document.createElement('span');
+            porcentaje.textContent = puntuacion.percent+"%";
+            porcentaje.classList.add("font-semibold")
+            p.appendChild(porcentaje);
+            //Añadimos a contenedor
             contPlataform.appendChild(p);
         });
         div.appendChild(contPlataform);
