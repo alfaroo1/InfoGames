@@ -1,6 +1,5 @@
 let routeRawdGames = "https://api.rawg.io/api/games?";
 let rutaRawdGenres = "https://api.rawg.io/api/genres?";
-let routeCheapShark = 'https://www.cheapshark.com/api/1.0/deals?title='
 let rawgKey = "11a1d83c1a254e86a58245639677986c";
 let listGneres = document.getElementById('categorias');
 let contGames = document.getElementById('games');

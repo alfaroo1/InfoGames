@@ -40,3 +40,46 @@
   border-radius: 0.5rem;
   padding: 0.25rem;
 }
+/* STYLE CARDS OFERTS GAME */
+.cardOfert{
+  display: flex;
+  gap: 1rem;
+  width: 400px;
+  box-shadow: 0px 0px 5px 5px rgb(210, 206, 206);
+  border-radius: 1.25rem;
+  padding: 1rem;
+}
+.cont__image{
+  border-radius: 0.5rem;
+  width: 200px;
+}
+.cont__image img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.cont__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cont__text h3{
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.price__normal{
+  text-decoration: line-through;
+  color: rgb(181, 178, 178);
+  font-size: .9rem;
+}
+.sale__price{
+  color: #F87171;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.btn__compra{
+  background-color: #F87171;
+  padding: 0.5rem;
+  width: 100px;
+  border-radius: 0.5rem;
+}

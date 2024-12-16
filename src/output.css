@@ -598,8 +598,20 @@ video {
   width: 120px;
 }
 
+.w-\[230px\] {
+  width: 230px;
+}
+
 .w-\[400px\] {
   width: 400px;
+}
+
+.w-\[40px\] {
+  width: 40px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-full {
@@ -610,12 +622,20 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -636,6 +656,11 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.bg-azulClaro {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 217 254 / var(--tw-bg-opacity, 1));
 }
 
 .bg-blue-300 {
@@ -731,4 +756,57 @@ video {
   background-color: #e29595;
   border-radius: 0.5rem;
   padding: 0.25rem;
+}
+
+/* STYLE CARDS OFERTS GAME */
+
+.cardOfert{
+  display: flex;
+  gap: 1rem;
+  width: 400px;
+  box-shadow: 0px 0px 5px 5px rgb(210, 206, 206);
+  border-radius: 1.25rem;
+  padding: 1rem;
+}
+
+.cont__image{
+  border-radius: 0.5rem;
+  width: 200px;
+}
+
+.cont__image img{
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cont__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cont__text h3{
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.price__normal{
+  text-decoration: line-through;
+  color: rgb(181, 178, 178);
+  font-size: .9rem;
+}
+
+.sale__price{
+  color: #F87171;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.btn__compra{
+  background-color: #F87171;
+  padding: 0.5rem;
+  width: 100px;
+  border-radius: 0.5rem;
 }

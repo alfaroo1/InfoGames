@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../output.css">
     <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <title>InfoGames | Ofertas</title>
 </head>
 
@@ -35,12 +36,28 @@
         </nav>
         <!-- Main -->
         <main>
+            <!-- Buscador -->
+            <section class="bg-red-400 w-full flex flex-col justify-center items-center p-4">
+                <div class="flex gap-6">
+                    <form action="">
+                        <input type="text" id="juego" class="p-2 rounded-md w-[230px]" placeholder="Busca tu videojuego...">
+                    </form>
+                    <button type="submit" id="btn_enviar" class="p-2 rounded-md text-center bg-azulClaro w-[40px]"><i class="fa-solid fa-magnifying-glass"></i> </button>
+                </div>
+            </section>
+            <!-- Contenedor con todas las ofertas -->
+            <div id="all" class="flex justify-center mt-6 flex-wrap gap-6">
 
+            </div>
+            <!-- Contenedor con las oferas que busque el usuario -->
+            <div id="especific" class="flex justify-center mt-6 flex-wrap gap-6">
+
+            </div>
         </main>
         <!-- Footer -->
     </div>
     <!-- JavaScript -->
-    <script src="./js/script.js"></script>
+    <script src="../js/ofertas.js"></script>
 </body>
 
 </html>
