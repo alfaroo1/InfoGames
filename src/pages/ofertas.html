@@ -45,14 +45,26 @@
                     <button type="submit" id="btn_enviar" class="p-2 rounded-md text-center bg-azulClaro w-[40px]"><i class="fa-solid fa-magnifying-glass"></i> </button>
                 </div>
             </section>
-            <!-- Contenedor con todas las ofertas -->
-            <div id="all" class="flex justify-center mt-6 flex-wrap gap-6">
-
-            </div>
-            <!-- Contenedor con las oferas que busque el usuario -->
-            <div id="especific" class="flex justify-center mt-6 flex-wrap gap-6">
-
-            </div>
+            <!-- Container principal -->
+            <section>
+                <!-- Title -->
+                <h2 class="text-3xl font-semibold m-6">Las mejores ofertas del mercado</h2>
+                <!-- Contenedor con todas las ofertas -->
+                <div id="oferts" class="flex justify-center mt-6 flex-wrap gap-6">
+                
+                </div>
+                <!-- Control de paginas -->
+                <div class="text-center max-w-full mt-6 mb-4" id="cont_pages">
+                    <!-- Numero de pagina -->
+                    <p id="num__page"></p>
+                    <div class="flex justify-center gap-6">
+                        <!-- Buton anterior pagina -->
+                        <button id="btn_anterior" class="bg-red-400 p-2 rounded-sm text-white font-medium w-[130px]">Anterior</button>
+                        <!-- Button siguiente pagina -->
+                        <button id="btn_siguiente" class="bg-azulClaro p-2 rounded-sm text-white font-medium w-[130px]">Siguiente</button>
+                    </div>
+                </div>
+            </section>
         </main>
         <!-- Footer -->
     </div>

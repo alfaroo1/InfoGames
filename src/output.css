@@ -562,6 +562,14 @@ video {
   grid-column: span 2 / span 2;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
+.m-6 {
+  margin: 1.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -614,6 +622,10 @@ video {
   width: 100%;
 }
 
+.w-\[130px\] {
+  width: 130px;
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -658,6 +670,10 @@ video {
   border-radius: 0.75rem;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .bg-azulClaro {
   --tw-bg-opacity: 1;
   background-color: rgb(185 217 254 / var(--tw-bg-opacity, 1));
@@ -692,6 +708,16 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-medium {
@@ -760,52 +786,59 @@ video {
 
 /* STYLE CARDS OFERTS GAME */
 
-.cardOfert{
+.cardOfert {
   display: flex;
   gap: 1rem;
   width: 400px;
+  height: 200px;
   box-shadow: 0px 0px 5px 5px rgb(210, 206, 206);
   border-radius: 1.25rem;
   padding: 1rem;
 }
 
-.cont__image{
+.cont__image {
   border-radius: 0.5rem;
   width: 200px;
 }
 
-.cont__image img{
-  -o-object-fit: cover;
-     object-fit: cover;
+.cont__image img {
+  -o-object-fit: fill;
+     object-fit: fill;
   width: 100%;
   height: 100%;
+  border-radius: 0.5rem;
 }
 
-.cont__text{
+.cont__text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.cont__text h3{
+.cont__text h3 {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.price__normal{
-  text-decoration: line-through;
-  color: rgb(181, 178, 178);
-  font-size: .9rem;
+.cont__text div {
+  display: flex;
+  align-items: center;
 }
 
-.sale__price{
-  color: #F87171;
+.price__normal {
+  text-decoration: line-through;
+  color: rgb(181, 178, 178);
+  font-size: 0.9rem;
+}
+
+.sale__price {
+  color: #f87171;
   font-size: 1.25rem;
   font-weight: 700;
 }
 
-.btn__compra{
-  background-color: #F87171;
+.btn__compra {
+  background-color: #f87171;
   padding: 0.5rem;
   width: 100px;
   border-radius: 0.5rem;
