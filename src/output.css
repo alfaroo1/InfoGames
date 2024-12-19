@@ -554,10 +554,6 @@ video {
   display: none;
 }
 
-.top-full {
-  top: 100%;
-}
-
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -570,10 +566,6 @@ video {
   margin: 1.5rem;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -582,8 +574,16 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
 }
 
 .mt-4 {
@@ -592,26 +592,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-24 {
-  margin-top: 6rem;
-}
-
-.mt-56 {
-  margin-top: 14rem;
-}
-
-.mt-80 {
-  margin-top: 20rem;
-}
-
-.mt-\[300px\] {
-  margin-top: 300px;
-}
-
-.mt-\[600px\] {
-  margin-top: 600px;
 }
 
 .mt-\[570px\] {
@@ -630,32 +610,16 @@ video {
   height: 100px;
 }
 
-.h-\[400px\] {
-  height: 400px;
-}
-
 .h-\[40px\] {
   height: 40px;
 }
 
-.h-\[60px\] {
-  height: 60px;
-}
-
-.h-\[600px\] {
-  height: 600px;
-}
-
-.h-\[50px\] {
-  height: 50px;
-}
-
-.h-\[800px\] {
-  height: 800px;
-}
-
 .h-\[700px\] {
   height: 700px;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .max-h-full {
@@ -668,6 +632,10 @@ video {
 
 .w-\[130px\] {
   width: 130px;
+}
+
+.w-\[220px\] {
+  width: 220px;
 }
 
 .w-\[230px\] {
@@ -688,10 +656,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[60px\] {
-  width: 60px;
 }
 
 .max-w-full {
@@ -720,10 +684,6 @@ video {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-items-center {
-  justify-items: center;
 }
 
 .gap-4 {
@@ -783,22 +743,6 @@ video {
   --tw-bg-opacity: 0.7;
 }
 
-.bg-opacity-60 {
-  --tw-bg-opacity: 0.6;
-}
-
-.bg-opacity-40 {
-  --tw-bg-opacity: 0.4;
-}
-
-.bg-opacity-30 {
-  --tw-bg-opacity: 0.3;
-}
-
-.bg-opacity-0 {
-  --tw-bg-opacity: 0;
-}
-
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
@@ -811,9 +755,8 @@ video {
   background-repeat: no-repeat;
 }
 
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
+.p-1 {
+  padding: 0.25rem;
 }
 
 .p-2 {
@@ -833,13 +776,13 @@ video {
   line-height: 2.25rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
+.text-lg {
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -861,14 +804,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-/* STYLE BUTTONS GENRES */
-
-.btn__genres {
-  border-radius: 0.75rem;
-  background-color: #b9d9fe;
-  width: 150px;
-  padding: 0.5rem;
-  color: white;
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 /* STYLE CARDS VIDEOGAMES */

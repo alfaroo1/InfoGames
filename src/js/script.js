@@ -1,50 +1,55 @@
 let routeRawdGames = "https://api.rawg.io/api/games?";
-let rutaRawdGenres = "https://api.rawg.io/api/genres?";
+let routeRawdFiltro = "https://api.rawg.io/api/";
 let rawgKey = "11a1d83c1a254e86a58245639677986c";
-let listGneres = document.getElementById('categorias');
+let contFiltros = document.getElementById('filtros');
+let filtGneres = document.getElementById('genres');
+let filtDev = document.getElementById('developers');
+let filtCreador = document.getElementById('creators');
 let contGames = document.getElementById('games');
 let cat = document.getElementById('categoria');
 //Funciones
 //Cargamos todos los tipos de generes
-const loadGenres = () =>{
-    fetch(rutaRawdGenres+"lang=es"+"&key="+rawgKey)
+const loadFilters = (select,filtro) =>{
+    fetch(routeRawdFiltro+select+"?lang=es"+"&key="+rawgKey)
     .then((respuesta) => respuesta.json())
     .then((datos) => {
+        console.log(datos.results);
+        
         //Creamos el fragment
         let fragment = new DocumentFragment();
         //Recorremos el array de resultados
         datos.results.forEach((resultado) => {
             //Creamos un item
-            let item = document.createElement("li");
-            item.classList.add("mb-4")
-            item.classList.add("text-center")
-            //Creamos un button por cada categoria
-            let buton = document.createElement('button');
-            buton.textContent = resultado.name;
-            buton.classList.add("btn__genres")
-            item.appendChild(buton);
+            let option = document.createElement("option");
+            option.textContent = resultado.name;
+            option.value = resultado.name;
+            option.classList.add("mb-4")
+            option.classList.add("text-center")
             //Le pasamos cada item al fragment
-            fragment.appendChild(item);
+            fragment.appendChild(option);
         });
-        listGneres.appendChild(fragment);
+        filtro.appendChild(fragment);
     })
 }
 //Sacamos el boton sobre el que hace click
-const chooseCategorie = (event) =>{
-    let cat = event.target.textContent;
-    return cat
+const chooseFilter = (event) =>{
+    if (event.target.tagName == "SELECT") {
+        let filter = event.target.value 
+        return filter;
+    }
 }
 //Cargamos los juegos dependiendo de la categoria que busque el usuario
 const gamesWithGenre = async (event) =>{
     //Dejamos a vacio el contnedor
     contGames.innerHTML = "";
     //Sacamos la categoria que ha seleccionado el usuario
-    let categoria = chooseCategorie(event);
-    //Le pasamos el tipo de categoria para completar el titulo
-    cat.textContent = categoria;
+    let filtro = chooseFilter(event);
+    //Sacamos el select por el select en el que esta actuando
+    let select =  event.target.id;
+    //Le pasamos el tipo de filtro al titulo
+    cat.textContent = filtro;
     //Le pasamos la URL con la categoria
-    console.log(routeRawdGames+"genres="+categoria.toLowerCase()+"&lang=es"+"&key="+rawgKey);
-    let respuesta = await fetch(routeRawdGames+"lang=es&"+"genres="+categoria.toLowerCase()+"&key="+rawgKey);
+    let respuesta = await fetch(routeRawdGames+select+"="+filtro.toLowerCase()+"&lang=es"+"&key="+rawgKey);
     let juegos = await respuesta.json();
     let juegosJSON = await juegos.results;
     console.log(juegosJSON);
@@ -69,8 +74,8 @@ const showGames = (games) =>{
         img.src = game.background_image;
         img.classList.add("mb-4")
         div.appendChild(img);
-        //Plataformas
-        let contPlataform = document.createElement('div');
+        //Opiniones
+        let contOpiniones = document.createElement('div');
         game.ratings.forEach((puntuacion) => {
             let p = document.createElement('p');
             //Calificacion
@@ -86,14 +91,17 @@ const showGames = (games) =>{
             porcentaje.classList.add("font-semibold")
             p.appendChild(porcentaje);
             //Añadimos a contenedor
-            contPlataform.appendChild(p);
+            contOpiniones.appendChild(p);
         });
-        div.appendChild(contPlataform);
+        div.appendChild(contOpiniones);
         //Le pasamos el contenedor
         fragment.appendChild(div);
     });
     contGames.appendChild(fragment);
 }
 //Eventos
-document.addEventListener('DOMContentLoaded',loadGenres);
-listGneres.addEventListener('click',gamesWithGenre)
+document.addEventListener('DOMContentLoaded',loadFilters("genres",filtGneres));
+document.addEventListener('DOMContentLoaded',loadFilters("developers",filtDev));
+document.addEventListener('DOMContentLoaded',loadFilters("creators",filtCreador));
+contFiltros.addEventListener('change',chooseFilter);
+contFiltros.addEventListener('click',gamesWithGenre)

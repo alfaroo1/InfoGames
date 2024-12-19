@@ -1,14 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* STYLE BUTTONS GENRES */
-.btn__genres {
-  border-radius: 0.75rem;
-  background-color: #b9d9fe;
-  width: 150px;
-  padding: 0.5rem;
-  color: white;
-}
 /* STYLE CARDS VIDEOGAMES */
 .card {
   width: 300px;
@@ -40,6 +32,7 @@
   border-radius: 0.5rem;
   padding: 0.25rem;
 }
+
 /* STYLE CARDS OFERTS GAME */
 .cardOfert {
   display: flex;

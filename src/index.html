@@ -34,12 +34,28 @@
         <!-- Main -->
         <main class="grid grid-cols-3">
             <!-- Section of categories -->
-            <section id="section_categorias" class="col-span-1 bg-red-400 w-[400px]">
+            <section id="section_categorias" class="col-span-1 bg-red-400 w-[400px] h-full">
                 <h2 class="mt-4 mb-4 ml-4 text-xl font-medium">Categorias de Videojuegos</h2>
-                <!-- List of categories -->
-                <ul id="categorias">
-                    
-                </ul>
+                <!-- Tipos de busquedas de juego -->
+                <div id="filtros" class="ml-6">
+                    <form action="">
+                        <!-- Listar por categoria -->
+                        <h2 class="mb-2">Filtrar por categoria</h2>
+                        <select name="" id="genres" class="w-[220px] p-1 rounded-sm mb-6">
+                        <option value="" disabled selected>- Selecciona una opcion -</option>
+                        </select>
+                        <!-- Listar por desarrollador -->
+                        <h2 class="mb-2">Filtrar por desarrollador</h2>
+                        <select name="" id="developers" class="w-[220px] p-1 rounded-sm mb-6">
+                        <option value="" disabled selected>- Selecciona una opcion -</option>
+                        </select>
+                        <!-- Listar por creadores -->
+                        <h2 class="mb-2">Listar por creador</h2>
+                        <select name="" id="creators" class="w-[220px] p-1 rounded-sm mb-6">
+                        <option value="" disabled selected>- Selecciona una opcion -</option>
+                        </select>
+                    </form>
+                </div>
             </section>
             <!-- Container width cards of videogames -->
             <div class="col-span-2">
