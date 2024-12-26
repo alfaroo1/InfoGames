@@ -8,6 +8,16 @@ let filtCreador = document.getElementById('creators');
 let contGames = document.getElementById('games');
 let cat = document.getElementById('categoria');
 //Funciones
+//Comprobamos si un string contiene espacio
+const comprobSpaces = (string) =>{
+    //Si contiene espacio los sustituimos por un guioon
+    if (string.includes(" ")) {
+        return string.replaceAll(" ","-");
+    }
+    //Si no contiene espacio lo devolvemos tal cual
+    return string;
+
+}
 //Cargamos todos los tipos de generes
 const loadFilters = (select,filtro) =>{
     fetch(routeRawdFiltro+select+"?lang=es"+"&key="+rawgKey)
@@ -22,7 +32,7 @@ const loadFilters = (select,filtro) =>{
             //Creamos un item
             let option = document.createElement("option");
             option.textContent = resultado.name;
-            option.value = resultado.name;
+            option.value = comprobSpaces(resultado.name);
             option.classList.add("mb-4")
             option.classList.add("text-center")
             //Le pasamos cada item al fragment
@@ -49,7 +59,8 @@ const gamesWithGenre = async (event) =>{
     //Le pasamos el tipo de filtro al titulo
     cat.textContent = filtro;
     //Le pasamos la URL con la categoria
-    let respuesta = await fetch(routeRawdGames+select+"="+filtro.toLowerCase()+"&lang=es"+"&key="+rawgKey);
+    let respuesta = await fetch(routeRawdGames+select+"="+cat.textContent.toLowerCase()+"&key="+rawgKey);
+    // let respuesta = await fetch(routeRawdGames+select+"="+filtro.toLowerCase()+"&lang=es"+"&key="+rawgKey);
     let juegos = await respuesta.json();
     let juegosJSON = await juegos.results;
     console.log(juegosJSON);
