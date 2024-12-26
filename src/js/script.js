@@ -59,7 +59,7 @@ const gamesWithGenre = async (event) =>{
     //Le pasamos el tipo de filtro al titulo
     cat.textContent = filtro;
     //Le pasamos la URL con la categoria
-    let respuesta = await fetch(routeRawdGames+select+"="+cat.textContent.toLowerCase()+"&key="+rawgKey);
+    let respuesta = await fetch(routeRawdGames+select+"="+filtro.toLowerCase()+"&key="+rawgKey);
     // let respuesta = await fetch(routeRawdGames+select+"="+filtro.toLowerCase()+"&lang=es"+"&key="+rawgKey);
     let juegos = await respuesta.json();
     let juegosJSON = await juegos.results;
