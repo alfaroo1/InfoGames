@@ -82,3 +82,15 @@
   width: 100px;
   border-radius: 0.5rem;
 }
+/* STYLE CARDS OF CART */
+.card__cart {
+  background-color: #d38383;
+  border-radius: 0.5rem;
+  margin-bottom: 20px;
+  padding: 1rem;
+}
+.title__cart {
+  font-size: 1.5rem;
+  color: #b9d9fe;
+  font-variant: small-caps;
+}

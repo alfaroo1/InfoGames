@@ -586,6 +586,10 @@ video {
   margin-left: 1.5rem;
 }
 
+.mr-6 {
+  margin-right: 1.5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -715,11 +719,6 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
 }
 
-.border-b-white {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
 .bg-azulClaro {
   --tw-bg-opacity: 1;
   background-color: rgb(185 217 254 / var(--tw-bg-opacity, 1));
@@ -735,14 +734,14 @@ video {
   background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
 }
 
-.bg-slate-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity, 1));
-}
-
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity, 1));
 }
 
 .bg-opacity-65 {
@@ -777,8 +776,21 @@ video {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl {
@@ -914,6 +926,21 @@ video {
   border-radius: 0.5rem;
 }
 
+/* STYLE CARDS OF CART */
+
+.card__cart {
+  background-color: #d38383;
+  border-radius: 0.5rem;
+  margin-bottom: 20px;
+  padding: 1rem;
+}
+
+.title__cart {
+  font-size: 1.5rem;
+  color: #b9d9fe;
+  font-variant: small-caps;
+}
+
 .placeholder\:text-white::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -922,32 +949,6 @@ video {
 .placeholder\:text-white::placeholder {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.focus\:border:focus {
-  border-width: 1px;
-}
-
-.focus\:border-4:focus {
-  border-width: 4px;
-}
-
-.focus\:border-b-4:focus {
-  border-bottom-width: 4px;
-}
-
-.focus\:border-b-2:focus {
-  border-bottom-width: 2px;
-}
-
-.focus\:border-white:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.focus\:border-b-white:focus {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
 .focus\:outline-none:focus {
