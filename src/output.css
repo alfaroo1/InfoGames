@@ -614,8 +614,8 @@ video {
   height: 100px;
 }
 
-.h-\[40px\] {
-  height: 40px;
+.h-\[30px\] {
+  height: 30px;
 }
 
 .h-\[700px\] {
@@ -644,6 +644,10 @@ video {
 
 .w-\[230px\] {
   width: 230px;
+}
+
+.w-\[30px\] {
+  width: 30px;
 }
 
 .w-\[35px\] {
@@ -939,6 +943,29 @@ video {
   font-size: 1.5rem;
   color: #b9d9fe;
   font-variant: small-caps;
+}
+
+/* STYLE CARD STORES */
+
+.card__store {
+  width: 300px;
+  height: 370px;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #b9d9fe;
+}
+
+.card__store-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card__store-text button {
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 0.7rem;
+  padding: 0px 10px 0px 10px;
+  color: white;
 }
 
 .placeholder\:text-white::-moz-placeholder {

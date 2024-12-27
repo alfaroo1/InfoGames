@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../output.css">
     <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <title>InfoGames | Videojuegos</title>
+    <title>InfoGames | Tiendas</title>
 </head>
 
 <body>
@@ -26,12 +26,14 @@
                     <a href="./ofertas.html">Ofertas</a>
                 </p>
                 <p>
-                    <a href="./videojuegos.html">Videojuegos</a>
+                    <a href="./tiendas.html">Tiendas</a>
                 </p>
             </div>
             <!-- Button sing up -->
+            <!-- Button sing up -->
             <div>
-                <button class="bg-red-400 p-2 w-[120px] rounded-xl text-white">Inicia Sesion</button>
+                <button class="text-red-400 text-xl"><i class="fa-regular fa-user"></i></button>
+                <button class="text-red-400 text-xl"><a href="./carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></button>
             </div>
         </nav>
         <!-- Main -->
@@ -39,14 +41,22 @@
             <!-- Galeria -->
             <div id="galeria" class="flex justify-between items-center max-w-full p-4 h-[700px] bg-no-repeat bg-cover border border-black">
                 <!-- Button anterior -->
-                <button id="btn_ant" class="bg-red-400 bg-opacity-80 w-[40px] h-[40px] flex items-center justify-center rounded-md text-white text-xl font-medium"><</button>
+                <button id="btn_ant" class="bg-red-400 bg-opacity-80 w-[30px] h-[30px] flex items-center justify-center rounded-md text-white text-xl font-medium">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
                 <!-- Container text -->
                 <div class="text-white mt-[570px]">
                     <h2 id="title" class="text-3xl font-medium mb-4"></h2>
                     <p id="text" class="text-lg"></p>
                 </div>
                 <!-- Button siguiente -->
-                <button id="btn_sig" class="bg-red-400 bg-opacity-80 w-[40px] h-[40px] flex items-center justify-center rounded-md text-white text-xl font-medium">></button>
+                <button id="btn_sig" class="bg-red-400 bg-opacity-80 w-[30px] h-[30px] flex items-center justify-center rounded-md text-white text-xl font-medium">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <!-- Info Stores -->
+            <div id="stores" class="flex flex-wrap gap-6 justify-center mt-6">
+
             </div>
         </main>
         <!-- Footer -->
