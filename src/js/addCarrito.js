@@ -18,7 +18,7 @@ const cargarVideojuegos = (titulo,precio) =>{
 }
 //Comprbar si ha pulsado el boton
 const comprobarButton = (event) => {
-    if (event.target.closest(".btn__compra")) {
+    if (event.target.tagName == "BUTTON") {
         // Encontrar la tarjeta contenedora del producto
         const card = event.target.closest(".cardOfert");
 

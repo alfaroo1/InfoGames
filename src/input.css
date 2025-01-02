@@ -81,6 +81,10 @@
   padding: 0.5rem;
   width: 100px;
   border-radius: 0.5rem;
+  transition: transform 0.5s;
+}
+.btn__compra :active {
+  transform: scale(1.2);
 }
 /* STYLE CARDS OF CART */
 .card__cart {

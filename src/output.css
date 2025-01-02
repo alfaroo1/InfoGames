@@ -554,10 +554,6 @@ video {
   display: none;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -580,10 +576,6 @@ video {
 
 .ml-4 {
   margin-left: 1rem;
-}
-
-.ml-6 {
-  margin-left: 1.5rem;
 }
 
 .mr-6 {
@@ -618,20 +610,12 @@ video {
   height: 30px;
 }
 
-.h-\[700px\] {
-  height: 700px;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-\[\] {
-  height: ;
-}
-
 .h-\[400px\] {
   height: 400px;
+}
+
+.h-\[700px\] {
+  height: 700px;
 }
 
 .max-h-full {
@@ -658,10 +642,6 @@ video {
   width: 35px;
 }
 
-.w-\[400px\] {
-  width: 400px;
-}
-
 .w-\[40px\] {
   width: 40px;
 }
@@ -672,10 +652,6 @@ video {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-2 {
@@ -932,6 +908,11 @@ video {
   padding: 0.5rem;
   width: 100px;
   border-radius: 0.5rem;
+  transition: transform 0.5s;
+}
+
+.btn__compra :active {
+  transform: scale(1.2);
 }
 
 /* STYLE CARDS OF CART */
@@ -994,10 +975,6 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .xl\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
   .xl\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1016,9 +993,5 @@ video {
 
   .xl\:justify-normal {
     justify-content: normal;
-  }
-
-  .xl\:text-left {
-    text-align: left;
   }
 }
