@@ -23,8 +23,6 @@ const loadFilters = (select,filtro) =>{
     fetch(routeRawdFiltro+select+"?lang=es"+"&key="+rawgKey)
     .then((respuesta) => respuesta.json())
     .then((datos) => {
-        console.log(datos.results);
-        
         //Creamos el fragment
         let fragment = new DocumentFragment();
         //Recorremos el array de resultados
@@ -63,7 +61,6 @@ const gamesWithGenre = async (event) =>{
     // let respuesta = await fetch(routeRawdGames+select+"="+filtro.toLowerCase()+"&lang=es"+"&key="+rawgKey);
     let juegos = await respuesta.json();
     let juegosJSON = await juegos.results;
-    console.log(juegosJSON);
     //Lllamamos a la funcion que carga los juegos
     showGames(juegosJSON)
 }

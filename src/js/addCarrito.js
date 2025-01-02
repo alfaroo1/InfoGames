@@ -27,20 +27,16 @@ const comprobarButton = (event) => {
             const titulo = card.querySelector("h3")?.textContent.trim();
 
             // Extraer el precio (usamos sale_price si existe, si no, usamos price_normal)
-            const salePriceElement = card.querySelector(".sale__price");
-            const normalPriceElement = card.querySelector(".price__normal");
-            const precio = salePriceElement
-                ? salePriceElement.textContent.trim()
-                : normalPriceElement?.textContent.trim();
+            const salePrice = card.querySelector(".sale__price");
+            const normalPrice = card.querySelector(".price__normal");
+            const precio = salePrice
+                ? salePrice.textContent.trim()
+                : normalPrice?.textContent.trim();
 
             // Verificar si tenemos título y precio
             if (titulo && precio) {
                 cargarVideojuegos(titulo, precio);
-            } else {
-                console.error("Faltan datos del producto (título o precio).");
             }
-        } else {
-            console.error("No se encontró la tarjeta del producto.");
         }
     }
 };
